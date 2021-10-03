@@ -3,15 +3,16 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 
 import AppLoading from 'expo-app-loading';
-import { useFonts, RobotoSlab_400Regular } from '@expo-google-fonts/roboto-slab';
+import { useFonts, RobotoSlab_400Regular, RobotoSlab_700Bold } from '@expo-google-fonts/roboto-slab';
 
 import { Routes } from './src/routes';
 
 export default function App() {
 
-  let [fontsLoaded] = useFonts([
+  let [fontsLoaded] = useFonts({
     RobotoSlab_400Regular,
-  ]);
+    RobotoSlab_700Bold,
+  });
 
   if(!fontsLoaded){
     return <AppLoading />

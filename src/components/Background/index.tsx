@@ -12,8 +12,8 @@ type Props = {
 export const Background = ({ children }: Props) => {
     return(
         <LinearGradient
-        colors={[theme.colors.BACKGROUND_1, theme.colors.BACKGROUND_2]}
-        style={styles.container}
+            colors={[theme.colors.BACKGROUND_1, theme.colors.BACKGROUND_2]}
+            style={styles.container}
         >
             {children}
         </LinearGradient>

@@ -1,0 +1,9 @@
+export const callofdutyinfinitewarfare = require('./call-of-duty-infinite-warfare.png');
+export const callofdutywwii = require('./call-of-duty-wwii.png');
+export const fifa18 = require('./fifa-18.png');
+export const horizonzerodawn = require('./horizon-zero-dawn.png');
+export const mortalkombatxl = require('./mortal-kombat-xl.png');
+export const shardsofdarkness = require('./shards-of-darkness.png');
+export const supermarioodyssey = require('./super-mario-odyssey.png');
+export const terramediasombrasdemordor = require('./terra-media-sombras-de-mordor.png');
+export const thewitcheriiiwildhunt = require('./the-witcher-iii-wild-hunt.png');

@@ -3,6 +3,13 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-<text transform="matrix(1 0 0 1 6.4048 24.0801)" display="none" font-family="'TimesNewRomanPSMT'" font-size="27">A</text>
-<text transform="matrix(1 0 0 1 2.3394 23.293)"><tspan x="0" y="0" font-family="'TimesNewRomanPSMT'" font-size="12">A-</tspan><tspan x="12.662" y="0" font-family="'TimesNewRomanPSMT'" font-size="24">Z</tspan></text>
+<path fill="black"  d="M7.83,20.633H4.754l-0.539,1.254c-0.133,0.309-0.199,0.539-0.199,0.691c0,0.121,0.058,0.228,0.173,0.319
+	s0.364,0.151,0.747,0.179v0.217H2.434v-0.217c0.332-0.059,0.547-0.135,0.645-0.229c0.199-0.188,0.42-0.568,0.662-1.143l2.795-6.539
+	H6.74l2.766,6.609c0.223,0.531,0.425,0.876,0.606,1.034s0.435,0.247,0.759,0.267v0.217H7.736v-0.217
+	c0.316-0.016,0.53-0.068,0.642-0.158s0.167-0.199,0.167-0.328c0-0.172-0.078-0.443-0.234-0.814L7.83,20.633z M7.666,20.199
+	l-1.348-3.211l-1.383,3.211H7.666z"/>
+<path fill="black" d="M11.492,20.158h3.029v0.885h-3.029V20.158z"/>
+<path fill="black" d="M28.806,7.402l-10.441,14.93h6.516c1,0,1.768-0.219,2.303-0.656s1.01-1.324,1.424-2.66l0.387,0.07l-0.75,4.207H15.306
+	v-0.434L25.501,8.352h-5.086c-0.844,0-1.455,0.092-1.834,0.275s-0.668,0.449-0.867,0.797s-0.381,0.998-0.545,1.951h-0.445
+	l0.328-3.973H28.806z"/>
 </svg>

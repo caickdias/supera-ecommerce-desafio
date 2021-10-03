@@ -3,7 +3,13 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-<text transform="matrix(1 0 0 1 6.4048 24.0801)" display="none" font-family="'TimesNewRomanPSMT'" font-size="27">A</text>
-<text transform="matrix(1 0 0 1 2.3394 23.293)" display="none"><tspan x="0" y="0" display="inline" font-family="'TimesNewRomanPSMT'" font-size="12">A-</tspan><tspan x="12.662" y="0" display="inline" font-family="'TimesNewRomanPSMT'" font-size="24">Z</tspan></text>
-<text transform="matrix(1 0 0 1 2.4077 23.293)"><tspan x="0" y="0" font-family="'TimesNewRomanPSMT'" font-size="24">Z</tspan><tspan x="14.661" y="0" font-family="'TimesNewRomanPSMT'" font-size="12">-A</tspan></text>
+<path fill="black" d="M16.213,7.402L5.771,22.332h6.516c1,0,1.768-0.219,2.303-0.656s1.01-1.324,1.424-2.66l0.387,0.07l-0.75,4.207H2.713v-0.434
+	L12.908,8.352H7.822c-0.844,0-1.455,0.092-1.834,0.275S5.32,9.076,5.121,9.424s-0.381,0.998-0.545,1.951H4.131l0.328-3.973H16.213z"
+	/>
+<path fill="black" d="M17.555,20.158h3.029v0.885h-3.029V20.158z"/>
+<path fill="black" d="M26.555,20.633h-3.076l-0.539,1.254c-0.133,0.309-0.199,0.539-0.199,0.691c0,0.121,0.058,0.228,0.173,0.319
+	s0.364,0.151,0.747,0.179v0.217h-2.502v-0.217c0.332-0.059,0.547-0.135,0.645-0.229c0.199-0.188,0.42-0.568,0.662-1.143l2.795-6.539
+	h0.205l2.766,6.609c0.223,0.531,0.425,0.876,0.606,1.034s0.435,0.247,0.759,0.267v0.217h-3.135v-0.217
+	c0.316-0.016,0.53-0.068,0.642-0.158s0.167-0.199,0.167-0.328c0-0.172-0.078-0.443-0.234-0.814L26.555,20.633z M26.391,20.199
+	l-1.348-3.211l-1.383,3.211H26.391z"/>
 </svg>
