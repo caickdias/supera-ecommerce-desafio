@@ -21,21 +21,47 @@ export const styles = StyleSheet.create({
         right: 0,
         top: 0,
         zIndex: 1,        
-    }, 
-    container: {
-        flex: 1,                
-    },
+    },     
     modalContainer: {       
-        position: 'absolute',
-        bottom: -50,        
+        position: 'absolute',        
+        bottom: -50,                
         borderTopLeftRadius: 40,
-        borderTopRightRadius: 40,
-        backgroundColor: 'red',        
+        borderTopRightRadius: 40,        
         height: '90%',
         width: '100%',
     },    
     linearGradient: {  
-        borderRadius: 40,              
+        borderRadius: 40,        
+        padding: 10,      
         height: '100%'
+    },
+    itemsList: {
+        flex: 3,
+        padding: 20,        
+    },
+    totalPriceArea: {
+        flex: 1,                
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+    },
+    buttonsArea: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-around',        
+    },        
+    priceText: {
+        color: 'white',
+        fontFamily: theme.fonts.default400,
+        fontSize: 16,
+    },
+    priceRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    priceSeparator: {
+        backgroundColor: 'white',
+        marginTop: 10,
+        marginBottom: 5,
     }
 })

@@ -5,3 +5,7 @@ export type GameProduct = {
     score: number;
     image: string;
 }
+
+export type CartGameProduct = GameProduct & {
+    quantity: number;
+}

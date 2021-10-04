@@ -12,6 +12,8 @@ import * as URIS  from '../../assets/png/index';
 import AddToCart from '../../assets/svg/add-cart.svg';
 import { QuantityInput } from '../QuantityInput';
 
+import * as Utils from '../utils';
+
 type Props = TouchableOpacityProps & {
     game: GameProduct;
 }
@@ -20,7 +22,7 @@ export const GameCard = ({ game, ...props}: Props) => {
     
     const { CARD_BACK1: color1, CARD_BACK2: color2 } = theme.colors;
     
-    const imageURI = game.image.replace(/-|.png/g, '');
+    const imageURI = Utils.formatGameNameToImage(game.image);
     
     const [quantity, setQuantity] = useState(1);
     
@@ -61,7 +63,7 @@ export const GameCard = ({ game, ...props}: Props) => {
                             Nota: {game.score}
                         </Text>
                         <Text style={styles.textInfo}>
-                            R$ {game.price}
+                            { Utils.formatPrice(game.price) }
                         </Text>
                     </View>
                     

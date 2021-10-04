@@ -61,7 +61,11 @@ export const Home = () => {
     }
 
     const openModalHandler = () => {
-        setCartModal(!cartModal);
+        setCartModal(true);
+    }
+
+    const closeModalHandler = () => {
+        setCartModal(false);
     }
 
     return(
@@ -71,7 +75,7 @@ export const Home = () => {
                     <View style={styles.header}>
                         <Text style={styles.headerText}>
                             Olá, 
-                            <Text style={styles.bold}>Caick</Text>
+                            <Text style={styles.bold}> Caick</Text>
                         </Text>
                     </View>
                     <LineDivider />
@@ -119,6 +123,7 @@ export const Home = () => {
                     <View style={styles.cart}>
                         <CartButtonModal 
                             visible={cartModal}
+                            onCancel={closeModalHandler}
                             onPress={openModalHandler} 
                         />
                     </View>
