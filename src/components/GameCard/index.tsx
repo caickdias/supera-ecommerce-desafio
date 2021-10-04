@@ -12,7 +12,7 @@ import * as URIS  from '../../assets/png/index';
 import AddToCart from '../../assets/svg/add-cart.svg';
 import { QuantityInput } from '../QuantityInput';
 
-import * as Utils from '../utils';
+import * as Utils from '../../utils';
 
 type Props = TouchableOpacityProps & {
     game: GameProduct;

@@ -1,61 +1,44 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { View, Text, ScrollView, TouchableWithoutFeedback, Keyboard } from 'react-native';
+
+import { styles } from './styles';
 
 import { Background } from '../../components/Background';
 import { Category } from '../../components/Category';
 import { GameCard } from '../../components/GameCard';
 import { LineDivider } from '../../components/LineDivider';
 import { SearchBar } from '../../components/SearchBar';
-
-import { GameProduct } from '../../components/models/GameProduct';
-
-import { styles } from './styles';
 import { CartButtonModal } from '../../components/CartButtonModal';
 
-const games: GameProduct[] = [
-    {
-        id: 1,
-        name: 'Mortal Kombat',
-        price: 190.10,
-        score: 150,
-        image: 'horizon-zero-dawn.png',
-    },
-    {
-        id: 2,
-        name: 'Super Mario World',
-        price: 110.20,
-        score: 210,
-        image: 'fifa-18.png',
-    },
-    {
-        id: 3,
-        name: 'Crash',
-        price: 290.10,
-        score: 125,
-        image: 'horizon-zero-dawn.png',
-    },
-]
+import * as Utils from '../../utils';
+
+import { GameProduct } from '../../components/models/GameProduct';
+import data from '../../products.json';
 
 export const Home = () => {
 
-    const [orderSelected, setOrderSelected] = useState('');
-    const [filteredGames, setFilteredGames] = useState(games);
+    const [categorySelected, setCategorySelected] = useState('');
+    const [gamesList, setGamesList] = useState<GameProduct[]>(data);
+    const [filteredGames, setFilteredGames] = useState<GameProduct[]>([...gamesList]);
     const [cartModal, setCartModal] = useState(false);
-
-    const orderHandler = (order: string) => {
-        if(orderSelected != order){
-            setOrderSelected(order);
+    
+    const sortHandler = (category: string) => {
+        if(categorySelected != category){            
+            Utils.sort(filteredGames, category);
+            setCategorySelected(category);            
+            
         } else {
-            setOrderSelected('');
+            setFilteredGames([...gamesList]);
+            setCategorySelected('');
         }
     }
         
     const searchHandler = (name: string) => {
         if(name == ''){
-            setFilteredGames(games);
+            setFilteredGames([...gamesList]);
         } else {
             setFilteredGames(
-                games.filter(game => game.name.toLowerCase().includes(name.toLowerCase()))
+                [...gamesList.filter(game => game.name.toLowerCase().includes(name.toLowerCase()))]
             );
         }
     }
@@ -93,21 +76,21 @@ export const Home = () => {
 
                         <View style={styles.categoriesArea}>
                             <Category 
-                                isSelected={orderSelected == 'score' ? true : false} 
+                                isSelected={categorySelected == 'score' ? true : false} 
                                 icon="score"
-                                onPress={() => orderHandler('score')} 
+                                onPress={() => sortHandler('score')} 
                             />                        
                                         
                             <Category 
-                                isSelected={orderSelected == 'price' ? true : false} 
+                                isSelected={categorySelected == 'price' ? true : false} 
                                 icon="price"
-                                onPress={() => orderHandler('price')} 
+                                onPress={() => sortHandler('price')} 
                             />                        
                                         
                             <Category 
-                                isSelected={orderSelected == 'alph' ? true : false} 
+                                isSelected={categorySelected == 'name' ? true : false} 
                                 icon="alph"
-                                onPress={() => orderHandler('alph')} 
+                                onPress={() => sortHandler('name')} 
                             />                                                              
                         </View>
                     </View>

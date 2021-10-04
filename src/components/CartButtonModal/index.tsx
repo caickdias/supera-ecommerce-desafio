@@ -1,19 +1,20 @@
+import React, { useContext, useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
-import React from 'react';
 import { TouchableOpacity, TouchableOpacityProps, View, Text, Modal, TouchableWithoutFeedback, Keyboard, FlatList } from 'react-native';
 
 import { styles } from './styles';
+
+import CartContext from '../../context/contexts';
 
 import { theme } from '../../globals/styles/theme';
 import { LineDivider } from '../LineDivider';
 import { Button } from '../Button';
 
-import * as Utils from '../utils';
+import * as Utils from '../../utils';
 
 import Cart from '../../assets/svg/cart-icon.svg';
 
 import { CartGameProduct } from '../models/GameProduct';
-import { CartItem } from '../CartItem';
 import { CartItemList } from '../CartItemList';
 
 type Props = TouchableOpacityProps & {    
@@ -21,47 +22,14 @@ type Props = TouchableOpacityProps & {
     onCancel: () => void;
 }
 
-
-const games: CartGameProduct[] = [
-    {
-        id: 1,
-        name: 'Mortal Kombat',
-        price: 190.10,
-        score: 150,
-        quantity: 1,
-        image: 'horizon-zero-dawn.png',
-    },
-    {
-        id: 2,
-        name: 'Super Mario World',
-        price: 9.70,
-        score: 210,
-        quantity: 1,
-        image: 'fifa-18.png',
-    },
-    {
-        id: 3,
-        name: 'Crash',
-        price: 20.10,
-        score: 125,
-        quantity: 1,
-        image: 'horizon-zero-dawn.png',
-    },
-    {
-        id: 4,
-        name: 'Crash',
-        price: 10.10,
-        score: 125,
-        quantity: 1,
-        image: 'horizon-zero-dawn.png',
-    },
-]
-
-
 export const CartButtonModal = ({ visible, onCancel, ...props }: Props) => {
     
     const { CARD_BACK1: color1, CARD_BACK2: color2 } = theme.colors;
+    const cart = useContext(CartContext);        
+    
+    const [cartList, setCartList] = useState<CartGameProduct[] | any>(cart);
 
+    console.log(cartList);
     return(
         <>
             {   !visible &&
@@ -71,7 +39,7 @@ export const CartButtonModal = ({ visible, onCancel, ...props }: Props) => {
                 >
                     <View style={styles.nOfItems}>
                         <Text>
-                            {games.length}
+                            {cartList.length}
                         </Text>
                     </View>
                     <Cart width={40} height={40} />
@@ -89,7 +57,7 @@ export const CartButtonModal = ({ visible, onCancel, ...props }: Props) => {
                         style={styles.linearGradient}
                     >
                         <View style={styles.itemsList}>
-                            <CartItemList data={games} />
+                            <CartItemList data={cartList} />
                         </View>
 
                         <LineDivider />
@@ -100,7 +68,7 @@ export const CartButtonModal = ({ visible, onCancel, ...props }: Props) => {
                                     <Text style={styles.priceText}>Subtotal: </Text>
                                     <Text style={styles.priceText}> { 
                                             Utils.formatPrice(
-                                                Utils.getSubtotal(games)
+                                                Utils.getSubtotal(cartList)
                                             )
                                         }
                                     </Text>
@@ -109,7 +77,7 @@ export const CartButtonModal = ({ visible, onCancel, ...props }: Props) => {
                                     <Text style={styles.priceText}>Frete: </Text>
                                     <Text style={styles.priceText}> {
                                         Utils.formatPrice(
-                                            Utils.getShipping(games)
+                                            Utils.getShipping(cartList)
                                         )
                                     }</Text>
                                 </View>
@@ -118,7 +86,11 @@ export const CartButtonModal = ({ visible, onCancel, ...props }: Props) => {
 
                                 <View style={styles.priceRow}>
                                     <Text style={styles.priceText}>Total: </Text>
-                                    <Text style={styles.priceText}> R$ 189,49</Text>
+                                    <Text style={styles.priceText}>{
+                                        Utils.formatPrice(
+                                            Utils.getSubtotal(cartList) + Utils.getShipping(cartList)
+                                        )
+                                    }</Text>
                                 </View>
                                 
                                 

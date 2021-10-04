@@ -4,7 +4,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
 
 import * as URIS from '../../assets/png';
-import * as Utils from '../utils';
+import * as Utils from '../../utils';
 
 import RemoveFromCart from '../../assets/svg/remove-cart-icon.svg';
 
