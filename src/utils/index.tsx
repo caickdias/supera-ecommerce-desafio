@@ -22,3 +22,7 @@ export const getShipping = (games: CartGameProduct[]) => {
 export const sort = (games: GameProduct[], sortBy: string) => {
     return games.sort((a, b) => a[sortBy] - b[sortBy] || a[sortBy] > b[sortBy]);
 }
+
+export const getNumberOfItems = (games: CartGameProduct[]) => {
+    return games.reduce((quantity, game) => quantity + game.quantity, 0);
+}

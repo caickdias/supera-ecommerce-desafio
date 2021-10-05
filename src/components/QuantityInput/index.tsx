@@ -4,19 +4,23 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
 
 type Props = {
-    onChangeQuantity: () => void;
+    value?: number;
+    onChangeQuantity: (quantity: number) => void;
 }
 
-export const QuantityInput = ({ onChangeQuantity }: Props) => {
+export const QuantityInput = ({ value=1, onChangeQuantity }: Props) => {
     
-    const [quantity, setQuantity] = useState(1);
+    const [quantity, setQuantity] = useState(value);
     
     const changeValueHandler = (operation: string) => {
         if(operation == 'add'){
             setQuantity(quantity+1);
+            onChangeQuantity(quantity+1);
         } else {
             setQuantity(Math.max(1, quantity-1));
+            onChangeQuantity(Math.max(1, quantity-1));
         }
+        
     }
 
     return(

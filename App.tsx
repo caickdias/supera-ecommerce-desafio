@@ -7,10 +7,7 @@ import { useFonts, RobotoSlab_400Regular, RobotoSlab_700Bold } from '@expo-googl
 
 import { Routes } from './src/routes';
 
-
-import { CartProvider } from './src/context/CartProvider';
-import { CartGameProduct } from './src/components/models/GameProduct';
-import CartContext from './src/context/contexts';
+import { CartProvider } from './src/context/Providers/CartProvider';
 
 export default function App() {
 
@@ -29,11 +26,3 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

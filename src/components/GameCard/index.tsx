@@ -16,9 +16,10 @@ import * as Utils from '../../utils';
 
 type Props = TouchableOpacityProps & {
     game: GameProduct;
+    onAddToCart: (game: GameProduct, quantity: number) => void;
 }
 
-export const GameCard = ({ game, ...props}: Props) => {
+export const GameCard = ({ game, onAddToCart, ...props}: Props) => {
     
     const { CARD_BACK1: color1, CARD_BACK2: color2 } = theme.colors;
     
@@ -30,13 +31,17 @@ export const GameCard = ({ game, ...props}: Props) => {
         setQuantity(quantity);
     }
 
+    const addHandler = () => {        
+        onAddToCart(game, quantity);        
+    }
+
     return(
         <TouchableOpacity  
             style={styles.container}     
             onPress={() => alert("detalhes")}            
             {...props}
         >
-            <TouchableOpacity style={styles.addToCart}>                
+            <TouchableOpacity style={styles.addToCart} onPress={addHandler}>                
                 <AddToCart width={50} height={50} />
             </TouchableOpacity>
 

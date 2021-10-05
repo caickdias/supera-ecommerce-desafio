@@ -3,6 +3,8 @@ import { View, Text, ScrollView, TouchableWithoutFeedback, Keyboard } from 'reac
 
 import { styles } from './styles';
 
+import { CartProvider } from '../../context/Providers/CartProvider';
+
 import { Background } from '../../components/Background';
 import { Category } from '../../components/Category';
 import { GameCard } from '../../components/GameCard';
@@ -14,6 +16,7 @@ import * as Utils from '../../utils';
 
 import { GameProduct } from '../../components/models/GameProduct';
 import data from '../../products.json';
+import CartContext from '../../context/contexts';
 
 export const Home = () => {
 
@@ -22,6 +25,8 @@ export const Home = () => {
     const [filteredGames, setFilteredGames] = useState<GameProduct[]>([...gamesList]);
     const [cartModal, setCartModal] = useState(false);
     
+    const { cart, addToCart } = useContext(CartContext);
+
     const sortHandler = (category: string) => {
         if(categorySelected != category){            
             Utils.sort(filteredGames, category);
@@ -43,6 +48,10 @@ export const Home = () => {
         }
     }
 
+    const addToCartHandler = (game: GameProduct, quantity: number) => {        
+        addToCart(game, quantity);
+    }
+
     const openModalHandler = () => {
         setCartModal(true);
     }
@@ -55,6 +64,7 @@ export const Home = () => {
         <Background>    
             <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>        
                 <View style={styles.container}>
+                    
                     <View style={styles.header}>
                         <Text style={styles.headerText}>
                             Olá, 
@@ -98,7 +108,12 @@ export const Home = () => {
                     <View style={styles.gamesCatalog}>
                         <ScrollView horizontal>
                             {
-                                filteredGames.map(game => <GameCard key={game.id} game={game} />)
+                                filteredGames.map(game => 
+                                <GameCard 
+                                    key={game.id} 
+                                    game={game} 
+                                    onAddToCart={addToCartHandler} 
+                                />)
                             }
                         </ScrollView>                                        
                     </View>

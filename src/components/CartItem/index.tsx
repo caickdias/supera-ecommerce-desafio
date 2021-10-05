@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 
 import { styles } from './styles';
@@ -6,19 +6,30 @@ import { styles } from './styles';
 import * as URIS from '../../assets/png';
 import * as Utils from '../../utils';
 
+import CartContext from '../../context/contexts';
 import RemoveFromCart from '../../assets/svg/remove-cart-icon.svg';
 
-import { GameProduct } from '../models/GameProduct';
+import { CartGameProduct } from '../models/GameProduct';
 import { QuantityInput } from '../QuantityInput';
 
 type Props = {
-    game: GameProduct;
+    game: CartGameProduct;
 }
 
 export const CartItem = ({ game }: Props) => {
     
     const imageUrl = Utils.formatGameNameToImage(game.image);
+    const { removeItem, editQuantity } = useContext(CartContext);
     
+    const removeItemHandler = () => {           
+        removeItem(game.id);
+    }
+
+    const editQuantityHandler = (quantity: number) => {
+        editQuantity(game.id, quantity);
+    }
+
+
     return(
         <View style={styles.container}>
             
@@ -44,11 +55,11 @@ export const CartItem = ({ game }: Props) => {
                     <Text style={styles.price}>
                         Qtd:
                     </Text>
-                    <QuantityInput />
+                    <QuantityInput value={game.quantity} onChangeQuantity={editQuantityHandler} />
                 </View>
             </View>                        
 
-            <TouchableOpacity style={styles.removeItem}>
+            <TouchableOpacity style={styles.removeItem} onPress={removeItemHandler}>
                 <RemoveFromCart width={30} height={30} />
             </TouchableOpacity>
 

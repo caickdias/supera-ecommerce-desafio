@@ -25,11 +25,8 @@ type Props = TouchableOpacityProps & {
 export const CartButtonModal = ({ visible, onCancel, ...props }: Props) => {
     
     const { CARD_BACK1: color1, CARD_BACK2: color2 } = theme.colors;
-    const cart = useContext(CartContext);        
+    const { cart, removeItem } = useContext(CartContext);                
     
-    const [cartList, setCartList] = useState<CartGameProduct[] | any>(cart);
-
-    console.log(cartList);
     return(
         <>
             {   !visible &&
@@ -39,7 +36,7 @@ export const CartButtonModal = ({ visible, onCancel, ...props }: Props) => {
                 >
                     <View style={styles.nOfItems}>
                         <Text>
-                            {cartList.length}
+                            {Utils.getNumberOfItems(cart.items)}
                         </Text>
                     </View>
                     <Cart width={40} height={40} />
@@ -57,7 +54,7 @@ export const CartButtonModal = ({ visible, onCancel, ...props }: Props) => {
                         style={styles.linearGradient}
                     >
                         <View style={styles.itemsList}>
-                            <CartItemList data={cartList} />
+                            <CartItemList data={cart.items} />
                         </View>
 
                         <LineDivider />
@@ -68,7 +65,7 @@ export const CartButtonModal = ({ visible, onCancel, ...props }: Props) => {
                                     <Text style={styles.priceText}>Subtotal: </Text>
                                     <Text style={styles.priceText}> { 
                                             Utils.formatPrice(
-                                                Utils.getSubtotal(cartList)
+                                                Utils.getSubtotal(cart.items)
                                             )
                                         }
                                     </Text>
@@ -77,7 +74,7 @@ export const CartButtonModal = ({ visible, onCancel, ...props }: Props) => {
                                     <Text style={styles.priceText}>Frete: </Text>
                                     <Text style={styles.priceText}> {
                                         Utils.formatPrice(
-                                            Utils.getShipping(cartList)
+                                            Utils.getShipping(cart.items)
                                         )
                                     }</Text>
                                 </View>
@@ -88,7 +85,7 @@ export const CartButtonModal = ({ visible, onCancel, ...props }: Props) => {
                                     <Text style={styles.priceText}>Total: </Text>
                                     <Text style={styles.priceText}>{
                                         Utils.formatPrice(
-                                            Utils.getSubtotal(cartList) + Utils.getShipping(cartList)
+                                            Utils.getSubtotal(cart.items) + Utils.getShipping(cart.items)
                                         )
                                     }</Text>
                                 </View>
