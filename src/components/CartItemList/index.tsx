@@ -6,7 +6,7 @@ import { styles } from './styles';
 import { CartItem } from '../CartItem';
 import { LineDivider } from '../LineDivider';
 
-import { GameProduct } from '../models/GameProduct';
+import { GameProduct } from '../models/Game';
 
 type Props = {
     data: GameProduct[];

@@ -2,8 +2,7 @@ import React, { useContext, useState } from 'react';
 import { View, Text, ScrollView, TouchableWithoutFeedback, Keyboard } from 'react-native';
 
 import { styles } from './styles';
-
-import { CartProvider } from '../../context/Providers/CartProvider';
+import data from '../../products.json';
 
 import { Background } from '../../components/Background';
 import { Category } from '../../components/Category';
@@ -14,8 +13,7 @@ import { CartButtonModal } from '../../components/CartButtonModal';
 
 import * as Utils from '../../utils';
 
-import { GameProduct } from '../../components/models/GameProduct';
-import data from '../../products.json';
+import { GameProduct } from '../../components/models/Game';
 import CartContext from '../../context/contexts';
 
 export const Home = () => {
@@ -24,17 +22,25 @@ export const Home = () => {
     const [gamesList, setGamesList] = useState<GameProduct[]>(data);
     const [filteredGames, setFilteredGames] = useState<GameProduct[]>([...gamesList]);
     const [cartModal, setCartModal] = useState(false);
+    const [order, setOrder] = useState('desc');
     
-    const { cart, addToCart } = useContext(CartContext);
+    const { addToCart } = useContext(CartContext);
 
     const sortHandler = (category: string) => {
-        if(categorySelected != category){            
-            Utils.sort(filteredGames, category);
+        if(categorySelected != category){   
+            setOrder('asc');         
+            Utils.sort(filteredGames, category, 'asc');
             setCategorySelected(category);            
             
-        } else {
-            setFilteredGames([...gamesList]);
-            setCategorySelected('');
+        } else {            
+            if(order == 'asc'){
+                setOrder('desc');         
+            Utils.sort(filteredGames, category, 'desc');
+            } else  {
+                setOrder('none');
+                setFilteredGames([...gamesList]);
+                setCategorySelected('');
+            }
         }
     }
         
@@ -88,19 +94,22 @@ export const Home = () => {
                             <Category 
                                 isSelected={categorySelected == 'score' ? true : false} 
                                 icon="score"
-                                onPress={() => sortHandler('score')} 
+                                onPress={() => sortHandler('score')}
+                                order={order} 
                             />                        
                                         
                             <Category 
                                 isSelected={categorySelected == 'price' ? true : false} 
                                 icon="price"
                                 onPress={() => sortHandler('price')} 
+                                order={order} 
                             />                        
                                         
                             <Category 
                                 isSelected={categorySelected == 'name' ? true : false} 
                                 icon="alph"
                                 onPress={() => sortHandler('name')} 
+                                order={order} 
                             />                                                              
                         </View>
                     </View>

@@ -9,7 +9,7 @@ import * as Utils from '../../utils';
 import CartContext from '../../context/contexts';
 import RemoveFromCart from '../../assets/svg/remove-cart-icon.svg';
 
-import { CartGameProduct } from '../models/GameProduct';
+import { CartGameProduct } from '../models/Game';
 import { QuantityInput } from '../QuantityInput';
 
 type Props = {
@@ -41,11 +41,18 @@ export const CartItem = ({ game }: Props) => {
             </View>
 
             <View style={styles.cartInfo}>
-                <View style={styles.gameName}>
-                    <Text style={styles.name}>
-                        { game.name }
-                    </Text>
+                <View style={styles.gameNameRow}>
+                    <View style={styles.gameName}>
+                        <Text style={styles.name}>
+                            { game.name }
+                        </Text>
+                    </View>
+
+                    <TouchableOpacity style={styles.removeItem} onPress={removeItemHandler}>
+                        <RemoveFromCart width={30} height={30} />
+                    </TouchableOpacity>
                 </View>
+                
 
                 <View style={styles.gamePrice}>
                     <Text style={styles.price}>
@@ -59,9 +66,6 @@ export const CartItem = ({ game }: Props) => {
                 </View>
             </View>                        
 
-            <TouchableOpacity style={styles.removeItem} onPress={removeItemHandler}>
-                <RemoveFromCart width={30} height={30} />
-            </TouchableOpacity>
 
         </View>
     )

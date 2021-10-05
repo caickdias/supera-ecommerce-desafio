@@ -4,7 +4,7 @@ import CartContext from '../contexts';
 import reducer, { initialState } from '../Reducers/CartReducer';
 import { ADD_TO_CART, EDIT_QUANTITY, REMOVE_ITEM } from '../Actions/CartActions';
 
-import { GameProduct } from '../../components/models/GameProduct';
+import { GameProduct } from '../../components/models/Game';
 
 type Props = {
     children: ReactNode;

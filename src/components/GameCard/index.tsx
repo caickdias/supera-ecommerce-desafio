@@ -4,7 +4,7 @@ import { View, Image, Text, TouchableOpacity, TouchableOpacityProps } from 'reac
 import { styles } from './styles';
 import { theme } from '../../globals/styles/theme';
 
-import { GameProduct } from '../models/GameProduct';
+import { GameProduct } from '../models/Game';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import * as URIS  from '../../assets/png/index';

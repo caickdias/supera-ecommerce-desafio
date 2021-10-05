@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import { TouchableOpacity, TouchableOpacityProps, View, Text, Modal, TouchableWithoutFeedback, Keyboard, FlatList } from 'react-native';
 
@@ -14,7 +14,6 @@ import * as Utils from '../../utils';
 
 import Cart from '../../assets/svg/cart-icon.svg';
 
-import { CartGameProduct } from '../models/GameProduct';
 import { CartItemList } from '../CartItemList';
 
 type Props = TouchableOpacityProps & {    

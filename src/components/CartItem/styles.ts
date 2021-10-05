@@ -21,8 +21,18 @@ export const styles = StyleSheet.create({
         flex: 1,
         resizeMode: 'contain',
     },
-    gameName: {
+    gameNameRow: {        
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         width: '100%',        
+    },
+    gameName: {
+        flex: 6,
+    },
+    removeItem: {   
+        flex: 1,
+        right: 0,
+        top: 0,        
     },
     name: {
         color: 'white',
@@ -41,9 +51,4 @@ export const styles = StyleSheet.create({
         fontFamily: theme.fonts.default400,
         fontSize: 14,
     },
-    removeItem: {
-        position: 'absolute',
-        right: 0,
-        top: 0,        
-    }
 })

@@ -1,4 +1,4 @@
-import { CartGameProduct, GameProduct } from "../../components/models/GameProduct";
+import { CartGameProduct, GameProduct } from "../../components/models/Game";
 
 type Actions = {
     type: string;
