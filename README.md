@@ -18,4 +18,4 @@ Minha intenção foi procurar uma interface simples, com poucas palavras e intui
 
 Escolhi as seguintes cores como principais do aplicativo:
 
-<img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/colors.png" width="20%" height="20%"/>
+<img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/colors.png" width="50%" height="50%"/>
