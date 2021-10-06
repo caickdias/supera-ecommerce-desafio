@@ -8,7 +8,7 @@ Primeiramente, procurei referências de lojas virtuais de jogos. Assim sendo, ba
 
 <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/ref-steam.png" width="40%" height="40%"/> <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/ref-epic.png" width="40%" height="40%"/>
 
-Decidi por optar por temas escuros e utilizei o Figma para desenhar as telas. DISCLAIMER: não sou ui/ux designer, não possuo know-how ou expertise nessa área, mas procurei fazer o melhor dentro de minhas limitações.
+Decidi optar por temas escuros e utilizei o Figma para desenhar as telas. DISCLAIMER: não sou ui/ux designer, não possuo know-how ou expertise nessa área, mas procurei fazer o melhor dentro de minhas limitações.
 
 # Desenho das telas no Figma:
 
