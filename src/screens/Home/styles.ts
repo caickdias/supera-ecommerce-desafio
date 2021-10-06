@@ -51,6 +51,9 @@ export const styles = StyleSheet.create({
         flex: 3,  
         zIndex: 1,              
     },
+    scrollView: {
+        minHeight: 200,
+    },
     cart: {
         flex: 1,           
         alignItems: 'center',

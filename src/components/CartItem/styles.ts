@@ -3,7 +3,7 @@ import { theme } from '../../globals/styles/theme';
 
 export const styles = StyleSheet.create({
     container: {        
-        flexDirection: 'row',        
+        flexDirection: 'row',                
         height: 100,
     },    
     gameImage: {

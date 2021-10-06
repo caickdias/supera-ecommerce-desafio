@@ -37,8 +37,7 @@ export const GameCard = ({ game, onAddToCart, ...props}: Props) => {
 
     return(
         <TouchableOpacity  
-            style={styles.container}     
-            onPress={() => alert("detalhes")}            
+            style={styles.container}                          
             {...props}
         >
             <TouchableOpacity style={styles.addToCart} onPress={addHandler}>                

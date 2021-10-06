@@ -113,9 +113,9 @@ export const Home = () => {
                             />                                                              
                         </View>
                     </View>
-
+                    
                     <View style={styles.gamesCatalog}>
-                        <ScrollView horizontal>
+                        <ScrollView style={styles.scrollView} horizontal>
                             {
                                 filteredGames.map(game => 
                                 <GameCard 
@@ -124,7 +124,7 @@ export const Home = () => {
                                     onAddToCart={addToCartHandler} 
                                 />)
                             }
-                        </ScrollView>                                        
+                        </ScrollView>                                
                     </View>
 
                     <View style={styles.cart}>
@@ -134,7 +134,7 @@ export const Home = () => {
                             onPress={openModalHandler} 
                         />
                     </View>
-
+                    
                 </View> 
             </TouchableWithoutFeedback>
         </Background>

@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
         backgroundColor: '#5E5E5E',   
         shadowColor: 'black',
         shadowOpacity: 0.4,
-        shadowOffset: {width: 2, height: 4}       
+        shadowOffset: {width: 2, height: 4},    
+        elevation: 10,   
     }
 })

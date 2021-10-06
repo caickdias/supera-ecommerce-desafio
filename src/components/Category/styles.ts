@@ -9,6 +9,9 @@ export const styles = StyleSheet.create({
         alignItems: 'center',        
         shadowColor: 'black',
         shadowOpacity: 1,
-        shadowOffset: {width: 2, height: 3}        
+        shadowOffset: {width: 2, height: 3},   
+        shadowRadius: 5,        
+        elevation: 10,
+
     }
 })

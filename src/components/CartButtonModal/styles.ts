@@ -18,8 +18,8 @@ export const styles = StyleSheet.create({
         backgroundColor: 'white',
         alignItems: 'center',
         justifyContent: 'center',
-        right: 0,
-        top: 0,
+        right: -10,
+        top: -10,
         zIndex: 1,        
     },     
     modalContainer: {       

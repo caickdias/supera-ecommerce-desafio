@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
-import { TouchableOpacity, TouchableOpacityProps, View, Text, Modal, TouchableWithoutFeedback, Keyboard, FlatList } from 'react-native';
+import { TouchableOpacity, TouchableOpacityProps, View, Text, Modal } from 'react-native';
 
 import { styles } from './styles';
 
@@ -15,6 +15,7 @@ import * as Utils from '../../utils';
 import Cart from '../../assets/svg/cart-icon.svg';
 
 import { CartItemList } from '../CartItemList';
+import { AnimatedCartButton } from '../AnimatedCartButton';
 
 type Props = TouchableOpacityProps & {    
     visible: boolean;
@@ -29,17 +30,18 @@ export const CartButtonModal = ({ visible, onCancel, ...props }: Props) => {
     return(
         <>
             {   !visible &&
-                <TouchableOpacity 
-                    style={styles.iconContainer}
-                    {...props}
-                >
-                    <View style={styles.nOfItems}>
-                        <Text>
-                            {Utils.getNumberOfItems(cart.items)}
-                        </Text>
-                    </View>
-                    <Cart width={40} height={40} />
-                </TouchableOpacity>
+                <AnimatedCartButton style={styles.iconContainer}>
+                    <TouchableOpacity                         
+                        {...props}
+                    >
+                        <View style={styles.nOfItems}>
+                            <Text>
+                                {Utils.getNumberOfItems(cart.items)}
+                            </Text>
+                        </View>
+                        <Cart width={40} height={40} />
+                    </TouchableOpacity>
+                </AnimatedCartButton>
             }
             
             <Modal

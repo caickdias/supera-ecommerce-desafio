@@ -3,7 +3,7 @@ import { theme } from '../../globals/styles/theme';
 
 export const styles = StyleSheet.create({
     container: {
-        flex: 1,             
+        flex: 1,                      
         padding: 10,        
         borderRadius: 10,
         shadowColor: theme.colors.PRIMARY,
@@ -17,7 +17,8 @@ export const styles = StyleSheet.create({
         zIndex: 1,
     },
     gameImage: {
-        flex: 1,                
+        flex: 1,       
+        alignItems: 'center',         
     },
     gameCover: {
         flex: 1,        
