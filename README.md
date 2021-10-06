@@ -10,7 +10,7 @@ Primeiramente, procurei referências de lojas virtuais de jogos para referência
 
 Decidi por optar por temas escuros e utilizei o Figma para desenhar as telas. DISCLAIMER: não sou ui/ux designer, não possuo know-how ou expertise nessa área, mas procurei fazer o melhor dentro de minhas limitações.
 
-DESENHO DAS TELAS NO FIGMA:
+# DESENHO DAS TELAS NO FIGMA:
 
 <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/figma-home.png" width="20%" height="20%"/> <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/figma-cart.png" width="20%" height="20%"/>
 
@@ -38,3 +38,6 @@ Considerei utilizar AsyncStorage, axios, fazer uma página com detalhe dos itens
 
 Seguem capturas de telas dos dispostivios físicos testados.
 
+# IPHONE 8
+
+<img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/iphone8-home-nocategory.png" width="20%" height="20%"/> <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/iphone8-home-priceasc.png" width="20%" height="20%"/> <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/iphone8-cart.png" width="20%" height="20%"/>
