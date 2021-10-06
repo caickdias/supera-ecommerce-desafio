@@ -48,4 +48,4 @@ Seguem capturas de telas dos dispostivios físicos testados.
 
 # FINAL
 
-Foi um desafio muito engrandecedor e agradeço a oportunidade.
+Foi um desafio muito engrandecedor e agradeço à empresa Supera pela oportunidade.
