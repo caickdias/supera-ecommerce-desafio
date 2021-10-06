@@ -1,4 +1,4 @@
-#Interface de um ecommerce de games utilizando React Native e Expo
+# Interface de um ecommerce de games utilizando React Native e Expo
 
 O aplicativo deste respositório foi feito para o processo seletivo da Supera Inovação e Tecnologia.
 
