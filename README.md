@@ -12,6 +12,6 @@ Decidi por optar por temas escuros e utilizei o Figma para desenhar as telas. DI
 
 DESENHO DAS TELAS NO FIGMA:
 
-<img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/figma-home.png" width="40%" height="40%"/> <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/figma-cart.png" width="40%" height="40%"/>
+<img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/figma-home.png" width="20%" height="20%"/> <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/figma-cart.png" width="20%" height="20%"/>
 
 Minha intenção foi procurar uma interface simples, com poucas palavras e intuição pelos ícones. Criei meus próprios ícones utilizando o Illustrator CS6.
