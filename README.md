@@ -15,3 +15,7 @@ DESENHO DAS TELAS NO FIGMA:
 <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/figma-home.png" width="20%" height="20%"/> <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/figma-cart.png" width="20%" height="20%"/>
 
 Minha intenção foi procurar uma interface simples, com poucas palavras e intuição pelos ícones. Criei meus próprios ícones utilizando o Illustrator CS6.
+
+Escolhi as seguintes cores como principais do aplicativo:
+
+<img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/colors.png" width="20%" height="20%"/>
