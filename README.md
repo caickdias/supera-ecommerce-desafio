@@ -41,3 +41,7 @@ Seguem capturas de telas dos dispostivios físicos testados.
 # IPHONE 8
 
 <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/iphone8-home-nocategory.jpeg" width="20%" height="20%"/> <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/iphone8-home-priceasc.jpeg" width="20%" height="20%"/> <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/iphone8-cart.jpeg" width="20%" height="20%"/>
+
+# MOTO G7
+
+<img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/android-motog7-home-nocategory.jpeg" width="20%" height="20%"/> <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/android-motog7-home-priceasc.jpeg" width="20%" height="20%"/> <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/android-motog7-cart.jpeg" width="20%" height="20%"/>
