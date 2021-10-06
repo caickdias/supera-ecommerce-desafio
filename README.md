@@ -46,6 +46,10 @@ Seguem capturas de telas dos dispostivios físicos testados.
 
 <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/android-motog7-home-nocategory.jpeg" width="20%" height="20%"/> <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/android-motog7-home-priceasc.jpeg" width="20%" height="20%"/> <img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/android-motog7-cart.jpeg" width="20%" height="20%"/>
 
+# FUNCIONAMENTO EM VÍDEO
+
+<img src="https://github.com/caickdias/supera-ecommerce-desafio/blob/main/readme-images/app-gif.gif" width="20%" height="20%"/>
+
 # FINAL
 
 Foi um desafio muito engrandecedor e agradeço à empresa Supera pela oportunidade.
